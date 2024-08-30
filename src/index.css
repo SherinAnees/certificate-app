@@ -5,3 +5,9 @@
   @apply bg-cover;
   background-image: url("./assets/Artboard original.png");
 }
+
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+}
