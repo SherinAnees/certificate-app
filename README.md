@@ -1,6 +1,6 @@
-# Certificate Generator
+# Certificate App
 
-This project is a Certificate Generator built with React and Tailwind CSS. It dynamically fetches certificate details from an API and renders a certificate that is fully responsive and styled using Tailwind CSS.
+This project is a Certificate Generator App built with React and Tailwind CSS. It dynamically fetches certificate details from an API and renders a certificate that is fully responsive and styled using Tailwind CSS.
 
 ## Features
 
@@ -19,49 +19,59 @@ This project is a Certificate Generator built with React and Tailwind CSS. It dy
 
 ## Installation
 
-1.  Clone the repository:
+1. Clone the repository:
 
-    git clone https://github.com/SherinAnees/certificate-app.git
-    cd certificate-app
+   ```bash
+   git clone https://github.com/SherinAnees/certificate-app.git
+   cd certificate-app
+   ```
 
-2.  Install the dependencies:
-    npm install
-    # or
-    yarn install
-3.  Add Environment Variables:
+2. Install the dependencies:
 
-    This project uses environment variables to manage API URLs. You need to create a .env file in the root of the project with the following content:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-        REACT_APP_BASE_URL=https://mockapi.io/api/v1
+3. Add Environment Variables:
 
-4.  Running the Project:
+   This project uses environment variables to manage API URLs. You need to create a `.env` file in the root of the project with the following content:
 
-To run the project locally, use the following command:
+   ```env
+   REACT_APP_BASE_URL=https://mockapi.io/api/v1
+   ```
 
-    npm start
-    # or
-    yarn start
+4. Running the Project:
 
-    The application will be available at http://localhost:3000
+   To run the project locally, use the following command:
+
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+   The application will be available at `http://localhost:3000`.
 
 ## Screenshots
 
 ### Home Page
 
-![Home page-Desktop](../certificate-app/public/screenshots/desktop%20view.png)
+![Home page-Desktop](public/screenshots/desktop%20view.png)
 
 ### Responsive View
 
-![Responsive View-ipad](../certificate-app/public/screenshots/ipad%20view.png)
-![Responsive View-mobile](../certificate-app/public/screenshots/mobile%20view.png)
+![Responsive View-ipad](public/screenshots/ipad%20view.png)
+![Responsive View-mobile](public/screenshots/mobile%20view.png)
 
 ### Error Page
 
-![Error Page](../certificate-app/public/screenshots/error%20page.png)
+![Error Page](public/screenshots/error%20page.png)
 
 ### Page Not Found
 
-![Page Not Found ](../certificate-app/public/screenshots/page%20not%20found.png)
+![Page Not Found](public/screenshots/page%20not%20found.png)
 
 ## Conclusion
 
