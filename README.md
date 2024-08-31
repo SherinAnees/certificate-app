@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Certificate Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Certificate Generator built with React and Tailwind CSS. It dynamically fetches certificate details from an API and renders a certificate that is fully responsive and styled using Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Fetches certificate data from an API
+- Responsive design using Tailwind CSS
+- Displays a loading screen while fetching data
+- Shows an error page if the data cannot be loaded
+- 404 page for unmatched routes
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** - Frontend library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **Axios** - Promise-based HTTP client for the browser and Node.js
+- **React Router** - Library for routing in React applications
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1.  Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    git clone https://github.com/SherinAnees/certificate-app.git
+    cd certificate-app
 
-### `npm run build`
+2.  Install the dependencies:
+    npm install
+    # or
+    yarn install
+3.  Add Environment Variables:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    This project uses environment variables to manage API URLs. You need to create a .env file in the root of the project with the following content:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        REACT_APP_BASE_URL=https://mockapi.io/api/v1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4.  Running the Project:
 
-### `npm run eject`
+To run the project locally, use the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    npm start
+    # or
+    yarn start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    The application will be available at http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Home Page
 
-## Learn More
+![Home page-Desktop](../certificate-app/public/screenshots/desktop%20view.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Responsive View
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Responsive View-ipad](../certificate-app/public/screenshots/ipad%20view.png)
+![Responsive View-mobile](../certificate-app/public/screenshots/mobile%20view.png)
 
-### Code Splitting
+### Error Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Error Page](../certificate-app/public/screenshots/error%20page.png)
 
-### Analyzing the Bundle Size
+### Page Not Found
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Page Not Found ](../certificate-app/public/screenshots/page%20not%20found.png)
 
-### Making a Progressive Web App
+## Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This Certificate Generator project demonstrates how to build a responsive React application using Tailwind CSS and Axios for API integration. The application is designed to be easily extendable and can serve as a foundation for further development or customization.
 
-### Advanced Configuration
+Feel free to explore the code, provide feedback, or contribute to its development. Your insights and improvements are always welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+For any questions or inquiries, please contact:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Sherin - [csherin111@gmail.com](mailto:csherin111@gmail.com)
+- GitHub: [sherinAnees](https://github.com/sherinAnees)
