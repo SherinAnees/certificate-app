@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const CertificateDisplay = () => {
+  const [certificateData, setCertificateData] = useState(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    //API call function
+    const fetchDetails = async () => {
+      try {
+        const responce = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/certificate`
+        );
+        setCertificateData(responce.data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+        setError(true);
+      }
+    };
+    fetchDetails();
+  }, []);
+
+  console.log(certificateData[0].course);
   return (
     <div className="bg-certificate  max-h-full max-w-4xl mx-auto my-6 p-6 bg-white text-center">
       <div className="h-full flex flex-col pt-80 ">
