@@ -12,7 +12,7 @@ const CertificateDisplay = () => {
         const responce = await axios.get(
           `${process.env.REACT_APP_BASE_URL}/certificate`
         );
-        setCertificateData(responce.data);
+        setCertificateData(responce.data[0]);
       } catch (error) {
         console.log("Error fetching data", error);
         setError(true);
@@ -21,7 +21,6 @@ const CertificateDisplay = () => {
     fetchDetails();
   }, []);
 
-  console.log(certificateData[0].course);
   return (
     <div className="bg-certificate  max-h-full max-w-4xl mx-auto my-6 p-6 bg-white text-center">
       <div className="h-full flex flex-col pt-80 ">
@@ -40,15 +39,16 @@ const CertificateDisplay = () => {
         </p>
         <div className="flex items-stretch justify-center gap-4 md:mb-16 mb-12">
           <h3 className="md:text-6xl text-4xl font-medium italic capitalize">
-            Name
+            {certificateData?.name}
           </h3>
-
-          <h3 className="md:text-6xl text-4xl font-medium italic capitalize ">
-            last Name
-          </h3>
+          {certificateData?.lname && (
+            <h3 className="md:text-6xl text-4xl font-medium italic capitalize ">
+              {certificateData?.lname}
+            </h3>
+          )}
         </div>
         <p className="mb-4 md:text-2xl text-xl font-normal tracking-widest">
-          For the outstanding completion of course on the
+          For the outstanding completion of {certificateData?.course} on the
         </p>
         <p className="md:mb-16 mb-12 md:text-3xl text-2xl uppercase font-normal">
           NOLTE FZE LEARNING PLATFORM
@@ -56,7 +56,7 @@ const CertificateDisplay = () => {
         <div className="flex justify-around md:mt-6 mt-4 md:mb-36 mb-28">
           <div>
             <p className="md:text-xl text-lg capitalize font-medium mb-1 text-start">
-              Name
+              {certificateData?.manager}
             </p>
             <p className="md:text-lg text-base capitalize md:mb-12 mb-10 text-start">
               Training Manager
@@ -70,7 +70,7 @@ const CertificateDisplay = () => {
           </div>
           <div>
             <p className="md:text-xl text-lg capitalize font-medium mb-1 text-start">
-              Name
+              {certificateData?.md}
             </p>
             <p className="md:text-lg text-base capitalize md:mb-12 mb-10 text-start">
               Managing Director
