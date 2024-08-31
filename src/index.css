@@ -5,10 +5,6 @@
   @apply bg-cover bg-center;
   background-image: url("./assets/Artboard original.png");
 }
-/* .bg-certificate-mobile {
-  @apply bg-cover;
-  background-image: url("./assets/Artboard original mobile.png");
-} */
 
 @layer utilities {
   .font-condensed {

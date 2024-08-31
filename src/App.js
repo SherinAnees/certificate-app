@@ -1,10 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import CertificateDisplay from "./components/CertificateDisplay";
+import PageNotFound from "./components/PageNotFound";
+import ErrorComponent from "./components/ErrorComponent";
 
 function App() {
   return (
-    <div className="App">
-      <CertificateDisplay />
-    </div>
+    <Routes>
+      <Route path="/" element={<CertificateDisplay />} />
+      <Route path="/error" element={<ErrorComponent />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 }
 

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import LoadingSpinner from "./LoadingSpinner";
+import { useNavigate } from "react-router-dom";
 
 const CertificateDisplay = () => {
   const [certificateData, setCertificateData] = useState(null);
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     //API call function
@@ -16,10 +19,17 @@ const CertificateDisplay = () => {
       } catch (error) {
         console.log("Error fetching data", error);
         setError(true);
+        navigate("/error");
       }
     };
     fetchDetails();
-  }, []);
+  }, [navigate]);
+  if (error) {
+    return null;
+  }
+  if (!certificateData) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <div className="bg-certificate  max-h-full max-w-4xl mx-auto my-6 p-6 bg-white text-center">
@@ -30,7 +40,7 @@ const CertificateDisplay = () => {
         <p className="md:text-4xl mb-2 uppercase tracking-wider text-2xl ">
           of Appreciation
         </p>
-        <div className="md:px-80 px-28">
+        <div className="md:px-72 px-28">
           <p className=" border-b-black border-b-[1px] w-full "></p>
         </div>
 
